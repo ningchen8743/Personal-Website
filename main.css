@@ -86,4 +86,27 @@ a:hover {
 	height:100%;
 }
 
+.image-inside:hover {
+	display: none;
+}
+
+/* #thumb-img {
+	display: inline-block;
+} */
+
+
+#title-descript{
+	font-family: "Century Gothic", sans-serif;
+	font-size: 15px;
+}
+
+.show-on-hover {
+	position: absolute;
+	opacity: 0;
+}
+
+.show-on-hover.is-visible {
+	opacity: 1;
+}
+
 
