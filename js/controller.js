@@ -16,4 +16,19 @@
 			event.target.classList.remove('is-visible');
 		})
 	}
+/* 	
+	let elementsToGoaway = document.querySelectorAll('.image-inside');
+	let elementsToGoawayArray = Array.from(elementsToGoaway);
+	
+	for(let i = 0; i < elementsToGoawayArray.length; ++i){
+		let item = elementsToGoawayArray[i];
+		
+		item.addEventListener('mouseover', (event) => {
+			event.target.classList.remove('is-visible');
+		})
+		item.addEventListener('mouseleave', (event) => {
+			event.target.classList.add('is-visible');
+		})
+	} */
+	
 }//end scope
