@@ -2,7 +2,6 @@
 
 {//start scope
     let els = document.querySelectorAll('.project-thumbnail');
-
     for(let i = 0; i < els.length; ++i)
     {
         let myDiv;
@@ -28,14 +27,40 @@
             }
         }
 
+        // fade out
         els[i].addEventListener('mouseover', (event) => {
-                myImg.style.opacity = 0.2;
                 myDiv.style.visibility = "visible";
-                });
+                myImg.style.opacity = 0.2;
+
+                // if(event.target === myImg)
+                // {
+                    // console.log("in");
+                    // myDiv.style.visibility = "visible";
+                    // myImg.style.opacity = 0.2;
+
+                    // // let fadeOutHandler = setInterval(() => {
+                        // // if(myImg.style.opacity > 0.2)
+                        // // {
+                            // // myImg.style.opacity -= 0.05;
+                        // // }
+                        // // else
+                        // // {
+                            // // // console.log(myImg.style.opacity);
+                            // // // myImg.style.opacity = 0.2;
+                            // // clearInterval(fadeOutHandler);
+                        // // }
+                    // // }, 20);
+                // }
+            });
+
+        // fade in
         els[i].addEventListener('mouseout', (event) => {
-                myImg.style.opacity  = 1.0;
-                myDiv.style.visibility = "hidden";
-                });
+                if(event.target === myDiv)
+                {
+                    myDiv.style.visibility = "hidden";
+                    myImg.style.opacity = 1.0;
+                }
+            });
     }
 
 
