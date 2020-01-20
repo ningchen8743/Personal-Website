@@ -110,6 +110,17 @@ a:hover {
     height:100%;
 	z-index:10;
     visibility:hidden;
+	font-weight:700;
+}
+
+a.link-to-website {
+	font-size: 17px;
+	color: #00827f;
+	font-weight:700;
+}
+
+a.link-to-website:hover {
+	color: orange;
 }
 
 #hobby-section {
