@@ -30,7 +30,7 @@
         // fade out
         els[i].addEventListener('mouseover', (event) => {
                 myDiv.style.visibility = "visible";
-                myImg.style.opacity = 0.2;
+                myImg.style.opacity = 0.1;
 
                 // if(event.target === myImg)
                 // {
@@ -55,11 +55,10 @@
 
         // fade in
         els[i].addEventListener('mouseout', (event) => {
-                if(event.target === myDiv)
-                {
+                
                     myDiv.style.visibility = "hidden";
                     myImg.style.opacity = 1.0;
-                }
+                
             });
     }
 
