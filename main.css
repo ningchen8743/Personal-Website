@@ -123,13 +123,35 @@ a.link-to-website:hover {
 	color: orange;
 }
 
+#slideshow-navigation {
+	font-size: 15px;
+	color: grey;
+	padding-right: 5vw;
+	text-align:right;
+}
+
+a.link-back-works {
+	font-size: 15px;
+	color: #00827f;
+	font-weight:700;
+}
+
+a.link-back-works:hover {
+	color: orange;
+}
+
 #workImgsControls {
 	height:100vh;
 }
 
-.GIS{
-	width: 100%;
+#workImgsControls {
+	margin:auto;
 }
+
+.GIS{
+	width: 87%;
+}
+
 
 #hobby-section {
     height:100vh;
