@@ -123,6 +123,14 @@ a.link-to-website:hover {
 	color: orange;
 }
 
+#workImgsControls {
+	height:100vh;
+}
+
+.GIS{
+	width: 100%;
+}
+
 #hobby-section {
     height:100vh;
 }
