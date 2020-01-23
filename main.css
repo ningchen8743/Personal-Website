@@ -93,7 +93,7 @@ a:hover {
 }
 
 .project-thumbnail {
-    width:30vw;
+    width:370px;
     display:inline-block;
     position: relative;
 }
@@ -106,6 +106,7 @@ a:hover {
 .show-on-hover {
     position: absolute;
     padding-top:10%;
+	padding-bottom:3%;
     width:100%;
     height:100%;
 	z-index:10;
@@ -114,7 +115,7 @@ a:hover {
 }
 
 a.link-to-website {
-	font-size: 17px;
+	font-size: 14px;
 	color: #00827f;
 	font-weight:700;
 }
@@ -152,9 +153,20 @@ a.link-back-works:hover {
 	width: 87%;
 }
 
+.drawing-inside-carousel {
+	max-height: 500px;
+}
+
+#drawing-words {
+	text-align: center;
+	font-size: 17px;
+	font-weight:700;
+	color: white;
+}
 
 #hobby-section {
     height:100vh;
+	background-color: #c0c0c0;
 }
 
 
