@@ -55,19 +55,60 @@
 
         // fade in
         els[i].addEventListener('mouseout', (event) => {
-                
+
                     myDiv.style.visibility = "hidden";
                     myImg.style.opacity = 1.0;
-                
+
             });
     }
-	
-	
 
+    let btnInfoDesign = document.querySelector("#info-design");
+    let btnGisMap     = document.querySelector("#gis-map");
+    let btnUrbanPlan  = document.querySelector("#urban-plan");
 
+    let projectList = document.querySelectorAll(".project-thumbnail");
+
+    btnInfoDesign.addEventListener("click", () => {
+        for(let i = 0; i < 6; ++i)
+        {
+            if(i < 3)
+            {
+                projectList[i].style.visibility = "visible";
+            }
+            else
+            {
+                projectList[i].style.visibility = "hidden";
+            }
+        }
+    });
+
+    btnGisMap.addEventListener("click", () => {
+        for(let i = 0; i < 6; ++i)
+        {
+            if(i == 3)
+            {
+                projectList[i].style.visibility = "visible";
+            }
+            else
+            {
+                projectList[i].style.visibility = "hidden";
+            }
+        }
+    });
+
+    btnUrbanPlan.addEventListener("click", () => {
+        for(let i = 0; i < 6; ++i)
+        {
+            if(i == 4 || i == 5)
+            {
+                projectList[i].style.visibility = "visible";
+            }
+            else
+            {
+                projectList[i].style.visibility = "hidden";
+            }
+        }
+    });
 }//end scope
 
 
-function selectFunction(){
-	document.getElementById("demo").innerHTML = "";		
-}
