@@ -61,6 +61,13 @@
                 
             });
     }
+	
+	
 
 
 }//end scope
+
+
+function selectFunction(){
+	document.getElementById("demo").innerHTML = "";		
+}

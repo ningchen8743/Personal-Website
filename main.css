@@ -76,11 +76,6 @@ a:hover {
 }
 
 
-.btn btn-outline-info {
-    color: #ff0000;
-    font-size: 21px;
-}
-
 #work-section {
     text-align:center;
 }
@@ -113,6 +108,7 @@ a:hover {
     visibility:hidden;
 	font-weight:700;
 }
+
 
 a.link-to-website {
 	font-size: 14px;
