@@ -65,6 +65,7 @@
     let btnInfoDesign = document.querySelector("#info-design");
     let btnGisMap     = document.querySelector("#gis-map");
     let btnUrbanPlan  = document.querySelector("#urban-plan");
+	let btnAllWorks   = document.querySelector("#all-works");
 
     let projectList = document.querySelectorAll(".project-thumbnail");
 
@@ -109,6 +110,14 @@
             }
         }
     });
+	
+	btnAllWorks.addEventListener("click", () => {
+		for(let i = 0; i < projectList.length; ++i)
+		{
+			projectList[i].style.visibility = "visible";
+		}
+	});
+	
 }//end scope
 
 
