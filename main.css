@@ -2,28 +2,39 @@ div {
     font-family: "Century Gothic", sans-serif;
 }
 
+body {
+	background-color: #222;
+}
+
 #introduction-div {
     text-align:center;
-    height:100vh;
-    padding-left: 2vw;
-    padding-right: 2vw;
-    background-color: #c0c0c0;
+    height:120vh;  
+}
+
+#video-opening {
+	width: 100%;
+}
+
+#introduction-words {
+	position: absolute;
+	padding-top: 22%;
+	padding-left: 20vw;
+    padding-right: 20vw;
+	top: 0;
+	color: white;
+	z-index: 100;
 }
 
 h1 {
-    padding-top: 15%;
-}
-
-h2 {
-    padding-left: 15vw;
-    padding-right: 15vw;
     font-size: 30px;
 }
 
+h2 {   
+    font-size: 21px;
+}
+
 h3 {
-    font-size: 24px;
-    margin-top: 30px;
-    font-weight: 700;
+    font-size: 21px;
 }
 
 p {
@@ -50,10 +61,8 @@ a:hover {
 
 #extra-div {
     font-family: "Century Gothic", sans-serif;
-    text-align: right;
+    text-align: center;
     font-size: 21px;
-    padding-right: 40px;
-    padding-top: 30px;
 }
 
 #navigation-block{
