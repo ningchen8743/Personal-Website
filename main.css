@@ -66,7 +66,11 @@ a:visited {
 }
 
 #songfingerprint-video {
-	height: 97vh;
+	height: 95vh;
+}
+
+#video-navigation {
+	padding-left: 60%;
 }
 
 #extra-div {
