@@ -40,6 +40,7 @@ h3 {
 p {
     font-family: "Century Gothic", sans-serif;
     font-size: 14px;
+	color: white;
 }
 
 #work-section {
@@ -47,20 +48,25 @@ p {
 }
 
 a:link {
-    color: white;
+    color: #17a2b8;
 }
 
 a:hover {
-    color: #00827f;
+    color: orange;
     text-decoration: none;
 }
 
 a:visited {
-  color: white;
+    color: #17a2b8;
 }
 
-#test {
-	color: #ff0000;
+#songfingerprint {
+	height: 100vh;
+	text-align: center;
+}
+
+#songfingerprint-video {
+	height: 97vh;
 }
 
 #extra-div {
@@ -84,7 +90,7 @@ a:visited {
 
 .all-category:hover {
     font-size: 24px;
-    color: #00827f;
+    color: #17a2b8;
     font-weight: 700;
 }
 
@@ -125,7 +131,7 @@ a:visited {
 
 a.link-to-website {
 	font-size: 14px;
-	color: #00827f;
+	color: #17a2b8;
 	font-weight:700;
 }
 
@@ -142,11 +148,22 @@ a.link-to-website:hover {
 
 a.link-back-works {
 	font-size: 15px;
-	color: #00827f;
+	color: #17a2b8;
 	font-weight:700;
 }
 
 a.link-back-works:hover {
+	color: orange;
+	font-size: 15px;
+}
+
+a.link-back-main {
+	font-size: 17px;
+	color: #17a2b8;
+	font-weight: 700;
+}
+
+a.link-back-main:hover {
 	color: orange;
 }
 
@@ -175,7 +192,8 @@ a.link-back-works:hover {
 
 #hobby-section {
     height:100vh;
-	background-color: #c0c0c0;
+	background-color: #222;
 }
+
 
 
