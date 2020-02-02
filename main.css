@@ -103,6 +103,10 @@ a:visited {
     text-align:center;
 }
 
+#specific-intro {
+	height: 100vh;
+}
+
 .flex-container {
     display: flex;
     flex-wrap: wrap;
