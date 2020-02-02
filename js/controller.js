@@ -1,16 +1,23 @@
 "use strict";
 
 {//start scope
+    let btnInfoDesign = document.querySelector("#info-design");
+    let btnGisMap     = document.querySelector("#gis-map");
+    let btnUrbanPlan  = document.querySelector("#urban-plan");
+    let btnAllWorks   = document.querySelector("#all-works");
     let els = document.querySelectorAll('.project-thumbnail');
-    for(let i = 0; i < els.length; ++i)
-    {
+
+    //------------------------------------------------------------
+    // helper function
+    //------------------------------------------------------------
+    function getDivAndImg(myElement) {
         let myDiv;
         let myImg;
 
         // get div
-        for(let j = 0; j < els[i].childNodes.length; ++j)
+        for(let j = 0; j < myElement.childNodes.length; ++j)
         {
-            myDiv = els[i].childNodes[j];
+            myDiv = myElement.childNodes[j];
             if(myDiv.className === 'show-on-hover')
             {
                 break;
@@ -18,106 +25,109 @@
         }
 
         // get image
-        for(let j = 0; j < els[i].childNodes.length; ++j)
+        for(let j = 0; j < myElement.childNodes.length; ++j)
         {
-            myImg = els[i].childNodes[j];
+            myImg = myElement.childNodes[j];
             if(myImg.className === 'image-inside')
             {
                 break;
             }
         }
 
-        // fade out
-        els[i].addEventListener('mouseover', (event) => {
-                myDiv.style.visibility = "visible";
-                myImg.style.opacity = 0.1;
-
-                // if(event.target === myImg)
-                // {
-                    // console.log("in");
-                    // myDiv.style.visibility = "visible";
-                    // myImg.style.opacity = 0.2;
-
-                    // // let fadeOutHandler = setInterval(() => {
-                        // // if(myImg.style.opacity > 0.2)
-                        // // {
-                            // // myImg.style.opacity -= 0.05;
-                        // // }
-                        // // else
-                        // // {
-                            // // // console.log(myImg.style.opacity);
-                            // // // myImg.style.opacity = 0.2;
-                            // // clearInterval(fadeOutHandler);
-                        // // }
-                    // // }, 20);
-                // }
-            });
-
-        // fade in
-        els[i].addEventListener('mouseout', (event) => {
-
-                    myDiv.style.visibility = "hidden";
-                    myImg.style.opacity = 1.0;
-
-            });
+        return {"myDiv" : myDiv,
+                "myImg" : myImg};
     }
 
-    let btnInfoDesign = document.querySelector("#info-design");
-    let btnGisMap     = document.querySelector("#gis-map");
-    let btnUrbanPlan  = document.querySelector("#urban-plan");
-	let btnAllWorks   = document.querySelector("#all-works");
+    //------------------------------------------------------------
+    // helper function
+    //------------------------------------------------------------
+    let mouseOverHandler = (event) => {
+        // event.currentTarget always refers to the parent element <div class="project-thumbnail">
+        let myResult = getDivAndImg(event.currentTarget);
 
-    let projectList = document.querySelectorAll(".project-thumbnail");
+        let myDiv = myResult["myDiv"];
+        let myImg = myResult["myImg"];
 
-    btnInfoDesign.addEventListener("click", () => {
-        for(let i = 0; i < 6; ++i)
-        {
-            if(i < 3)
-            {
-                projectList[i].style.visibility = "visible";
-            }
-            else
-            {
-                projectList[i].style.visibility = "hidden";
-            }
-        }
-    });
+        myDiv.style.opacity = 1.0;
+        myImg.style.opacity = 0.5;
+    };
 
-    btnGisMap.addEventListener("click", () => {
-        for(let i = 0; i < 6; ++i)
-        {
-            if(i == 3)
-            {
-                projectList[i].style.visibility = "visible";
-            }
-            else
-            {
-                projectList[i].style.visibility = "hidden";
-            }
-        }
-    });
+    //------------------------------------------------------------
+    // helper function
+    //------------------------------------------------------------
+    let mouseOutHandler = (event) => {
+        // event.currentTarget always refers to the parent element <div class="project-thumbnail">
+        let myResult = getDivAndImg(event.currentTarget);
 
-    btnUrbanPlan.addEventListener("click", () => {
-        for(let i = 0; i < 6; ++i)
-        {
-            if(i == 4 || i == 5)
+        let myDiv = myResult["myDiv"];
+        let myImg = myResult["myImg"];
+
+        myDiv.style.opacity = 0.0;
+        myImg.style.opacity = 1.0;
+    };
+
+    //------------------------------------------------------------
+    // helper function
+    //------------------------------------------------------------
+    function configureSelectedEls(activeElsIndex, myButton) {
+        // add event listener to buttons
+        myButton.addEventListener("click", () => {
+            // remove event listener from all divs
+            for(let i = 0; i < els.length; ++i)
             {
-                projectList[i].style.visibility = "visible";
+                let myResult = getDivAndImg(els[i]);
+
+                let myDiv = myResult["myDiv"];
+                let myImg = myResult["myImg"];
+
+                // check if the element is active or inactive
+                let bIsActive = activeElsIndex.includes(i);
+
+                // for active elements
+                if(bIsActive)
+                {
+                    myDiv.style.opacity = 0.0;
+                    myImg.style.opacity = 1.0;
+
+                    els[i].addEventListener("mouseover", mouseOverHandler);
+                    els[i].addEventListener("mouseout", mouseOutHandler);
+                }
+                // for inactive elements
+                else
+                {
+                    myDiv.style.opacity = 0.0;
+                    myImg.style.opacity = 0.2;
+
+                    els[i].removeEventListener("mouseover", mouseOverHandler);
+                    els[i].removeEventListener("mouseout", mouseOutHandler);
+                }
             }
-            else
-            {
-                projectList[i].style.visibility = "hidden";
-            }
-        }
-    });
-	
-	btnAllWorks.addEventListener("click", () => {
-		for(let i = 0; i < projectList.length; ++i)
-		{
-			projectList[i].style.visibility = "visible";
-		}
-	});
-	
+        }); // end myButton.addEventListener
+    }
+
+    //------------------------------------------------------------
+    // main
+    //------------------------------------------------------------
+    // initialize
+    for(let i = 0; i < els.length; ++i)
+    {
+        let myResult = getDivAndImg(els[i]);
+
+        let myDiv = myResult["myDiv"];
+        let myImg = myResult["myImg"];
+
+        myDiv.style.opacity = 0.0;
+        myImg.style.opacity = 1.0;
+
+        els[i].addEventListener("mouseover", mouseOverHandler);
+        els[i].addEventListener("mouseout", mouseOutHandler);
+    }
+
+    configureSelectedEls([0, 1, 2], btnInfoDesign);
+    configureSelectedEls([3], btnGisMap);
+    configureSelectedEls([4, 5], btnUrbanPlan);
+    configureSelectedEls([0, 1, 2, 3, 4, 5], btnAllWorks);
+
 }//end scope
 
 
