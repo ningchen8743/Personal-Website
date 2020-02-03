@@ -123,7 +123,7 @@ a:visited {
 
 #specific-intro {
 	padding-top: 10vh;
-	margin-bottom: 40vh;
+	margin-bottom: 50vh;
 }
 
 .flex-container {
@@ -239,5 +239,7 @@ ul {
 	margin-bottom: 5vh;
 }
 
-
+#back-main {
+	padding-right: 5vw;
+}
 
