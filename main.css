@@ -33,8 +33,24 @@ h2 {
     font-size: 21px;
 }
 
+#aboutme {
+	color: white;
+	font-weight: 700;
+}
+
 h3 {
     font-size: 21px;
+}
+
+.container {
+	text-align:left;
+	
+}
+
+.aboutme-section {
+	font-size: 17px;
+	color: white;
+	font-weight: 700;
 }
 
 p {
@@ -79,11 +95,13 @@ a:visited {
     font-size: 21px;
 }
 
-#navigation-block{
+
+.navigation-block{
     font-family: "Century Gothic", sans-serif;
     font-size: 21px;
     height:20vh;
     padding-top:10vh;
+	padding-left:20vw;
 }
 
 .all-category {
@@ -104,7 +122,8 @@ a:visited {
 }
 
 #specific-intro {
-	height: 100vh;
+	padding-top: 10vh;
+	margin-bottom: 40vh;
 }
 
 .flex-container {
@@ -153,6 +172,7 @@ a.link-to-website:hover {
 	text-align:right;
 }
 
+
 a.link-back-works {
 	font-size: 15px;
 	color: #17a2b8;
@@ -200,6 +220,23 @@ a.link-back-main:hover {
 #hobby-section {
     height:100vh;
 	background-color: #222;
+}
+
+ul {
+	font-size: 15px;
+	text-align: left;
+	color:#17a2b8;
+}
+
+.skillset {
+	font-size: 17px;
+	text-align: left;
+	color:#17a2b8;
+	font-weight:700;
+}
+
+#navi-bar {
+	margin-bottom: 5vh;
 }
 
 

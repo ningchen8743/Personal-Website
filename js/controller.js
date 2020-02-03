@@ -49,7 +49,7 @@
         let myImg = myResult["myImg"];
 
         myDiv.style.opacity = 1.0;
-        myImg.style.opacity = 0.5;
+        myImg.style.opacity = 0.1;
     };
 
     //------------------------------------------------------------
