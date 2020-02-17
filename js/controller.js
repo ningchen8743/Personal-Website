@@ -125,8 +125,8 @@
 
     configureSelectedEls([0, 1, 2], btnInfoDesign);
     configureSelectedEls([3], btnGisMap);
-    configureSelectedEls([4, 5, 6], btnUrbanPlan);
-    configureSelectedEls([0, 1, 2, 3, 4, 5, 6], btnAllWorks);
+    configureSelectedEls([4, 5, 6, 7], btnUrbanPlan);
+    configureSelectedEls([0, 1, 2, 3, 4, 5, 6, 7], btnAllWorks);
 
 }//end scope
 
