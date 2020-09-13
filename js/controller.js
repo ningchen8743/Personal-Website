@@ -123,10 +123,10 @@
         els[i].addEventListener("mouseout", mouseOutHandler);
     }
 
-    configureSelectedEls([0, 1, 2, 3, 4], btnInfoDesign);
-    configureSelectedEls([5, 6, 7], btnGisMap);
-    configureSelectedEls([8, 9, 10, 11, 12], btnUrbanPlan);
-    configureSelectedEls([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], btnAllWorks);
+    configureSelectedEls([0, 1, 2, 3, 4, 5], btnInfoDesign);
+    configureSelectedEls([6, 7, 8], btnGisMap);
+    configureSelectedEls([9, 10, 11, 12, 13], btnUrbanPlan);
+    configureSelectedEls([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], btnAllWorks);
 
 }//end scope
 

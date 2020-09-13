@@ -60,7 +60,7 @@ p {
 }
 
 #work-section {
-    height:170vh;
+    height:200vh;
 }
 
 a:link {
@@ -76,16 +76,19 @@ a:visited {
     color: #17a2b8;
 }
 
-#songfingerprint {
+#songfingerprint,
+#BookVIS-project {
 	height: 100vh;
 	text-align: center;
 }
 
-#songfingerprint-video {
+#songfingerprint-video,
+#bookvis-video {
 	height: 95vh;
 }
 
-#video-navigation {
+#video-navigation,
+#video2-navigation {
 	padding-left: 60%;
 }
 
