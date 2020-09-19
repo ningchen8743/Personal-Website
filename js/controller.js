@@ -96,7 +96,7 @@
                 else
                 {
                     myDiv.style.opacity = 0.0;
-                    myImg.style.opacity = 0.2;
+                    myImg.style.opacity = 0.1;
 
                     els[i].removeEventListener("mouseover", mouseOverHandler);
                     els[i].removeEventListener("mouseout", mouseOutHandler);
